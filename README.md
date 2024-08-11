@@ -4,20 +4,20 @@ Ever heard of [Lenny](<https://en.wikipedia.org/wiki/Lenny_(bot)>)? Considering 
 
 ## Unmanned
 
-Unmanned talk bots work the same as standard Lenny. They wait for noise followed by 1.5 seconds of silence, then play the next audio. This mode is intended for inbound calls.
+Unmanned talk bots work the same as standard Lenny. They listen for noise followed by 1.5 seconds of silence then play the next audio. This mode is intended for inbound calls.
 
 ## Manned
 
-Manned talk bots are intended to be conferenced with callers using a softphones like [PhonerLite](http://www.phonerlite.de/download_en.htm). They provide the following control:
+Manned talk bots are intended to be conferenced with other calls using a softphone like [PhonerLite](http://www.phonerlite.de/download_en.htm). They work just like unmanned talk bots but provide the following control:
 
--   Immediately after the bot has picked up you may enter the recording number to start with on your keypad.
+-   1.5 seconds after the bot has picked up you may enter the recording number to start with on your keypad.
 -   When the bot is listening you may press `#` to advance or `*` to pause.
 
 # Adding a Talk Bot
 
-We add manned Lenny in this guide.
+In this guide we add manned Lenny.
 
-<details open>
+<details>
 <summary><h2>FreePBX</h2></summary>
 
 1. FTP into your PBX.
