@@ -15,9 +15,9 @@ Manned talk bots are intended to be conferenced with other calls using a softpho
 
 # Adding a Talk Bot
 
-In this guide we add manned Lenny.
+In this guide we add manned Lenny. Before you start, [download](https://github.com/ThatRex/asterisk-extendible-talk-bot/archive/refs/heads/master.zip) and extract this repo.
 
-<details>
+<details open>
 <summary><h2>FreePBX</h2></summary>
 
 1. FTP into your PBX.
@@ -84,7 +84,7 @@ exten => johny,1,Gosub(talk-bot-core,init,unmanned(johny,20,5)) ; new
 | **Arg 2**     | Number of audio files.                     |
 | **Arg 3**     | On what number file should the loop begin. |
 
-<details>
+<details open>
 <summary><h2>Editing Tips</h2></summary>
 
 -   At a minimum you should have around 15+ audio clips per talk bot.
@@ -93,10 +93,14 @@ exten => johny,1,Gosub(talk-bot-core,init,unmanned(johny,20,5)) ; new
 
 </details>
 
-<details>
+<details open>
 <summary><h2>Conversion Script</h2></summary>
 
-This script will convert **mp3** and **wav** files to raw audio files suitable for Asterisk (8kHz mono G.711u). You will need [FFmpeg](https://ffmpeg.org/) installed. You can then run the script in the same folder as the files you want to convert.
+This script will convert **mp3** and **wav** files to raw audio files suitable for Asterisk (8kHz mono G.711u).
+
+1. Make sure [FFmpeg](https://ffmpeg.org/) is installed.
+2. In your terminal, navigate to the directory containing the audio files to be converted.
+3. Paste the appropriate script into your terminal.
 
 ### Linux
 
@@ -107,6 +111,7 @@ for file in *.mp3 *.wav; do
   name="$output/${file%.${file##*.}}.ulaw"
   ffmpeg -i "$file" -ar 8000 -ac 1 -acodec pcm_mulaw -f mulaw "$name";
 done
+
 ```
 
 ### Windows
@@ -118,6 +123,7 @@ Get-ChildItem | where {$_.extension -in ".mp3",".wav"} | ForEach-Object {
     $name = "$output/$($_.BaseName).ulaw"
     & ffmpeg -i $_.Name -ar 8000 -ac 1 -acodec pcm_mulaw -f mulaw $name
 }
+
 ```
 
 </details>
