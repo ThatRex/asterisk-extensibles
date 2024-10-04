@@ -5,7 +5,7 @@
 
 Extensible apps for asterisk: [**Talk Bot**](/app-talk-bot/) • [**Media Player**](/app-music-player/)
 
-## Conversion Script
+# Conversion Script
 
 This script will convert any **MP3**, **WAV** or **FLAC** files to **Mono 8kHz PCM WAV** files suitable for Asterisk. Converted files will be placed in a sub directory named `converted`.
 
