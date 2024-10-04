@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > Basic terminal and PBX management skills are assumed.
 
-Extensible apps for asterisk: [**Talk Bot**](/app-talk-bot/README.md) • [**Media Player**](/app-music-player/README.md)
+Extensible apps for asterisk: [**Talk Bot**](/app-talk-bot/) • [**Media Player**](/app-music-player/)
 
 ## Conversion Script
 

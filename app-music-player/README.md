@@ -62,7 +62,7 @@ This section instructs you on adding music tracks. You will need to repeat these
 <details _open>
 <summary><h3>Instructions</h3></summary>
 
-1. Convert your music using the provided [conversion script](../README.md#conversion-script).
+1. Convert your music using the provided [conversion script](../#conversion-script).
 2. Prepend the track numbers with a unique track number like followed by a period. Example:
     ```
     1. Track A

@@ -74,7 +74,7 @@ This section instructs you on creating your own talk bots.
 <summary><h3>Instructions</h3></summary>
 
 1. Using [ocenaudio](https://www.ocenaudio.com/) or [Audacity](https://www.audacityteam.org/) edit your recording(s) to clips. Saving your clips as **Mono 8kHz PCM WAV** files means you won't need to convert them later.
-2. If needed, run the [audio conversion script](../README.md#conversion-script) to convert the clips to a suitable format.
+2. If needed, run the [audio conversion script](../#conversion-script) to convert the clips to a suitable format.
 3. In order number each clip from 1 to however many clips you have. Put an L after the number the loop should begin on. Example:
     ```
     1.wav
