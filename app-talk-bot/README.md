@@ -48,7 +48,7 @@ This section instructs you on adding a talk bot, in this case Lenny. You will ne
    ![Custom Destination](../screenshots/tb_freepbx_custom_destination.png)
 3. Create a virtual extension.  
    ![Create Extension](../screenshots/freepbx_create_virtual_extension.png)
-4. Under **Advanced** > **Optional Destinations** set **Not Reachable** to the custom destination you created.  
+4. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.  
    ![Set Optional Destination](../screenshots/tb_freepbx_set_optional_destination.png)
 5. Save & Apply Config. Then give the extension a call.
 
@@ -85,7 +85,7 @@ This section instructs you on creating your own talk bots.
     6.wav
     7.wav
     ...
-    background.wav <- Optional 5min background noise to play when listening.
+    background.wav <- Optional 5 min noise to play when paused or listening.
     ```
 4. You can now [add your new talk bot](#adding-a-talk-bot).
 

@@ -7,7 +7,7 @@ Extensible apps for asterisk: [**Talk Bot**](/app-talk-bot/) • [**Media Player
 
 # Conversion Script
 
-This script will convert any **MP3**, **WAV** or **FLAC** files to **Mono 8kHz PCM WAV** files suitable for Asterisk. Converted files will be placed in a sub directory named `converted`.
+This script will convert any **MP3**, **WAV** or **FLAC** files to **Mono 8kHz PCM WAV** files suitable for Asterisk. Converted files will be placed in a subdirectory named `converted`.
 
 1. Ensure [FFmpeg](https://ffmpeg.org/) is installed on your system.
 2. Open your terminal, then navigate to the directory containing the audio files to be converted.

@@ -29,13 +29,13 @@ This section instructs you on preparing your PBX to add music. You will only nee
 
 1. FTP into your PBX.
 2. Under `/var/lib/asterisk/sounds/` create a directory named `music`.
-3. In your PBX admin navigate to **Admin** > **Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.  
+3. In your PBX admin navigate to **Admin > Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.  
    ![Config Edit](../screenshots/m_freepbx_config_edit.png)
 4. Create a custom destination with the target set to `music,menu,1`. Alternatively you can put a track number instead of `menu`.
    ![Custom Destination](../screenshots/m_freepbx_custom_destination.png)
 5. Create a virtual extension.  
    ![Create Extension](../screenshots/freepbx_create_virtual_extension.png)
-6. Under **Advanced** > **Optional Destinations** set **Not Reachable** to the custom destination you created.  
+6. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.  
    ![Set Optional Destination](../screenshots/m_freepbx_set_optional_destination.png)
 7. Save & Apply Config. Then [add your music tracks](#adding-music-tracks).
 
@@ -63,11 +63,11 @@ This section instructs you on adding music tracks. You will need to repeat these
 <summary><h3>Instructions</h3></summary>
 
 1. Convert your music using the provided [conversion script](../#conversion-script).
-2. Prepend the track numbers with a unique track number like followed by a period. Example:
+2. Prepend the track names with a unique track number like followed by a period. Example:
     ```
-    1. Track A
-    2. Track B
-    3. Track C
+    1. Track A.wav
+    2. Track B.wav
+    3. Track C.wav
     ```
 3. FTP into your PBX, then copy your named and converted tracks into `/var/lib/asterisk/sounds/music/`.
 4. You can now dial the music app extension then enter a track number.
