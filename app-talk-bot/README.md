@@ -85,7 +85,7 @@ This section instructs you on creating your own talk bots.
     6.wav
     7.wav
     ...
-    background.wav <- Optional background noise to play when listening.
+    background.wav <- Optional 5min background noise to play when listening.
     ```
 4. You can now [add your new talk bot](#adding-a-talk-bot).
 
