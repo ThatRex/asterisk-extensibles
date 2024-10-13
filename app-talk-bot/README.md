@@ -43,8 +43,8 @@ This section instructs you on adding a talk bot, in this case Lenny. You will ne
 <details _open>
 <summary><h3>Instructions: FreePBX</h3></summary>
 
-1. FTP into your PBX, then copy `audio/lenny/` into `/var/lib/asterisk/sounds/talk-bot/`.
-2. Create a custom destination with the target set to `tb-control,lenny,1`. [Learn More](#understanding-custom-destinationcontexts-parameters).
+1. FTP into your PBX, then copy the `lenny` directory from `audio/` into `/var/lib/asterisk/sounds/talk-bot/`.
+2. Create a custom destination with the target set to `tb-control,lenny,1`. [Learn More](#custom-destinationcontexts-parameters).
    ![Custom Destination](../screenshots/tb_freepbx_custom_destination.png)
 3. Create a virtual extension.  
    ![Create Extension](../screenshots/freepbx_create_virtual_extension.png)
@@ -57,8 +57,8 @@ This section instructs you on adding a talk bot, in this case Lenny. You will ne
 <details _open>
 <summary><h3>Instructions: VitalPBX</h3></summary>
 
-1. FTP into your PBX, then copy `audio/lenny/` into `/var/lib/asterisk/sounds/talk-bot/`.
-2. Create a Custom Context with the destination set to hangup. [Learn More](#understanding-custom-destinationcontexts-parameters).
+1. FTP into your PBX, then copy the `lenny` directory from `audio/` into `/var/lib/asterisk/sounds/talk-bot/`.
+2. Create a Custom Context with the destination set to hangup. [Learn More](#custom-destinationcontexts-parameters).
    ![Custom Context](../screenshots/tb_vitalpbx_custom_contexts.png)
 3. Create a Custom Application with the destination set to your Custom Context.
    ![Custom Application](../screenshots/tb_vitalpbx_custom_applications.png)
@@ -91,11 +91,11 @@ This section instructs you on creating your own talk bots.
 
 </details>
 
-# Understanding Custom Destination/Contexts Parameters
+# Custom Destination/Contexts Parameters
 
 **Context:** `tb-control` or `tb-locked`.  
-**Extension:** Same as folder name under `/var/lib/asterisk/sounds/talk-bot/`.  
-**Priority:** Always 1.
+**Extension:** Name of bot directory under `/var/lib/asterisk/sounds/talk-bot/`.  
+**Priority:** Always `1`.
 
 ```lisp
 ; FreePBX Custom Destination Target Diagram
