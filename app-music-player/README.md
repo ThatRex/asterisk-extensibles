@@ -65,9 +65,7 @@ This section instructs you on adding music tracks. You will need to repeat these
 
 1. Convert your music using the provided [conversion script](../#conversion-script).
 2. Prepend the track names with a unique track number like followed by a period. Example:
-
-   > [!IMPORTANT]
-   > Track names **MUST NOT** contain commas.
+    > Track names **MUST NOT** contain commas.
     ```
     1. Track A.wav
     2. Track B.wav
