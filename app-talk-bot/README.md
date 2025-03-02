@@ -3,12 +3,13 @@
 Ever heard of [Lenny](<https://en.wikipedia.org/wiki/Lenny_(bot)>)? Considering you are reading this, chances are yes. AETB is built on top of the original Lenny code with extensibility in mind. Additionally, when in control mode the following controls are available:
 
 ```c
-EXT,X - choose audio
-EXT,0 - start listening
+EXT,X - Select Audio
+EXT,0 - Start Listening
 
-# - advance
-* - replay
-0 - pause
+/// Controls
+# - Advance
+* - Replay
+0 - Pause
 ```
 
 # Initial Setup
@@ -18,7 +19,7 @@ This section instructs you on preparing your PBX to add talk bots. You will only
 <details _open>
 <summary><h3>Instructions: FreePBX</h3></summary>
 
-1. In your PBX admin navigate to **Admin** > **Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.  
+1. In your PBX admin navigate to **Admin** > **Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.
    ![Config Edit](../screenshots/tb_freepbx_config_edit.png)
 2. FTP into your PBX.
 3. Under `/var/lib/asterisk/sounds/` create a directory named `talk-bot`.
@@ -46,9 +47,9 @@ This section instructs you on adding a talk bot, in this case Lenny. You will ne
 1. FTP into your PBX, then copy the `lenny` directory from `audio/` into `/var/lib/asterisk/sounds/talk-bot/`.
 2. Create a custom destination with the target set to `tb-control,lenny,1`. [Learn More](#custom-destinationcontexts-parameters).
    ![Custom Destination](../screenshots/tb_freepbx_custom_destination.png)
-3. Create a virtual extension.  
+3. Create a virtual extension.
    ![Create Extension](../screenshots/freepbx_create_virtual_extension.png)
-4. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.  
+4. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.
    ![Set Optional Destination](../screenshots/tb_freepbx_set_optional_destination.png)
 5. Save & Apply Config. Then give the extension a call.
 
@@ -93,8 +94,8 @@ This section instructs you on creating your own talk bots.
 
 # Custom Destination/Contexts Parameters
 
-**Context:** `tb-control` or `tb-locked`.  
-**Extension:** Name of bot directory under `/var/lib/asterisk/sounds/talk-bot/`.  
+**Context:** `tb-control` or `tb-locked`.
+**Extension:** Name of bot directory under `/var/lib/asterisk/sounds/talk-bot/`.
 **Priority:** Always `1`.
 
 ```lisp

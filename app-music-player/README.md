@@ -3,19 +3,20 @@
 AEMP makes it easy to add music to your PBX.
 
 ```c
-EXT,X - choose track
+EXT,X - Select Track
 
-# - ff
-* - rew
-0 - pause
-1 - restart
-2 - vol-down
-3 - vol-up
-5 - trk-previous
-6 - trk-next
-4 - tgl-repeat
-7 - tgl-playlist
-9 - menu
+/// Controls (Available After Track Selected)
+# - Fast Forward
+* - Rewind
+0 - Play Pause
+1 - Restart
+2 - Volume Down
+3 - Volume Up
+5 - Track Previous
+6 - Track Next
+4 - Toggle Repeat
+7 - Toggle Playlist
+9 - Menu
 ```
 
 A playlist is a group of consecutively numbered tracks. Example: [1,2,3,4] [6,7,8,9]
@@ -29,13 +30,13 @@ This section instructs you on preparing your PBX to add music. You will only nee
 
 1. FTP into your PBX.
 2. Under `/var/lib/asterisk/sounds/` create a directory named `music`.
-3. In your PBX admin navigate to **Admin > Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.  
+3. In your PBX admin navigate to **Admin > Config Edit**, then copy the contents of `main.conf` into `extensions_custom.conf`. Remember to save.
    ![Config Edit](../screenshots/m_freepbx_config_edit.png)
 4. Create a custom destination with the target set to `music,menu,1`. Alternatively you can put a track number instead of `menu`.
    ![Custom Destination](../screenshots/m_freepbx_custom_destination.png)
-5. Create a virtual extension.  
+5. Create a virtual extension.
    ![Create Extension](../screenshots/freepbx_create_virtual_extension.png)
-6. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.  
+6. Under **Advanced > Optional Destinations** set **Not Reachable** to the custom destination you created.
    ![Set Optional Destination](../screenshots/m_freepbx_set_optional_destination.png)
 7. Save & Apply Config. Then [add your music tracks](#adding-music-tracks).
 
@@ -64,6 +65,9 @@ This section instructs you on adding music tracks. You will need to repeat these
 
 1. Convert your music using the provided [conversion script](../#conversion-script).
 2. Prepend the track names with a unique track number like followed by a period. Example:
+
+   > [!IMPORTANT]
+   > Track names **MUST NOT** contain commas.
     ```
     1. Track A.wav
     2. Track B.wav
