@@ -2,14 +2,15 @@
 
 Ever heard of [Lenny](<https://en.wikipedia.org/wiki/Lenny_(bot)>)? Considering you are reading this, chances are yes. AETB is built on top of the original Lenny code with extensibility in mind. Additionally, when in control mode the following controls are available:
 
-```c
-EXT,X - Select Audio
-EXT,0 - Start Listening
+```thrift
+EXT ┬ Extension
+    ├ ,X ─ Select Audio
+    ╰ ,0 ─ Start Listening
 
 /// Controls
-# - Advance
-* - Replay
-0 - Pause
+# ─ Advance
+* ─ Replay
+0 ─ Pause
 ```
 
 # Initial Setup

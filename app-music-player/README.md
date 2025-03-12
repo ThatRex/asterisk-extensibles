@@ -2,21 +2,25 @@
 
 AEMP makes it easy to add music to your PBX.
 
-```c
-EXT,X - Select Track
+```thrift
+EXT,IDX ─ Select Track
 
 /// Controls (Available After Track Selected)
-# - Fast Forward
-* - Rewind
-0 - Play Pause
-1 - Restart
-2 - Volume Down
-3 - Volume Up
-5 - Track Previous
-6 - Track Next
-4 - Toggle Repeat
-7 - Toggle Playlist
-9 - Menu
+# ┬ Track Next
+* ┴ Track Previous
+0 ─ Pause Play
+
+3 ┬ Fast Forward
+2 ┴ Rewind
+1 ─ Restart
+
+6 ┬ Volume Up
+5 ┴ Volume Down
+4 ─ Volume Reset
+
+9 ┬ Toggle Repeat╶──╮   
+8 ┴ Toggle Playlist╶┴─ Repeat List
+7 ─ Menu
 ```
 
 A playlist is a group of consecutively numbered tracks. Example: [1,2,3,4] [6,7,8,9]
