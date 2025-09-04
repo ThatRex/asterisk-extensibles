@@ -3,9 +3,9 @@
 AEMP makes it easy to add music to your PBX.
 
 ```thrift
-EXT,IDX ─ Select Track
+EXT,TRK ─ Select Track
 
-/// Controls (Available After Track Selected)
+/// Controls (Available Once Track Playing)
 # ┬ Track Next
 * ┴ Track Previous
 0 ─ Pause Play
@@ -87,7 +87,7 @@ For the best experience you will want to enable connected line. This will allow 
 <details _open>
 <summary><h3>Instructions: FreePBX</h3></summary>
 
-Under an extensions advanced settings enable **Send Connected Line**.
+Under an extensions advanced settings, enable **Send Connected Line**.
 ![advanced extension settings](../screenshots/freepbx_connected_line.png)
 
 </details>
